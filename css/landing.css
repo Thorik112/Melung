@@ -1,0 +1,275 @@
+.date-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff5722;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.owl-carousel .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 350px;
+    /* Atur tinggi sesuai kebutuhan */
+    object-fit: cover;
+    /* Membuat gambar menyesuaikan ukuran container */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-grow: 1;
+    /* Membuat bagian body mengambil sisa ruang kartu */
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1em;
+    color: #666;
+}
+
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Pusatkan vertikal */
+    flex-wrap: wrap;
+    list-style: none;
+    
+
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+.menu-item {
+    position: relative;
+    text-align: center;
+    /* Teks di tengah */
+    margin: 1px 0;
+}
+
+.menu-item a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    /* Padding lebih besar */
+    display: flex;
+    /* Menggunakan flexbox */
+    align-items: center;
+    /* Pusatkan vertikal */
+    justify-content: center;
+    /* Pusatkan horizontal */
+    color: #333;
+    transition: all 0.3s ease;
+    /* Efek transisi lebih halus */
+    border-radius: 4px;
+    /* Sudut melengkung */
+}
+
+.menu-item a:hover {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+    /* Latar belakang saat hover */
+    transform: translateY(-2px);
+    /* Efek naik sedikit */
+}
+
+/* Submenu Styling */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); /* Smooth animasi */
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px) saturate(150%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 6px 0;
+    opacity: 1;
+    visibility: hidden;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    z-index: 1000;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Efek muncul saat hover atau focus */
+.menu-item:hover > .submenu,
+.menu-item:focus-within > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Styling item dalam submenu */
+.submenu .menu-item {
+    /* padding: 4px 8px; */
+    text-align: center;
+}
+
+/* Styling link dalam submenu */
+.submenu .menu-item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 8px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect untuk link dalam submenu */
+.submenu .menu-item a:hover {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+    transform: scale(1.05); /* Sedikit membesar untuk efek interaktif */
+}
+
+
+/* Sub-Submenu Styling */
+.sub-submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 200px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px) saturate(150%);
+    transform: translateX(-50%) translateY(10px); /* Smooth animasi */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.submenu .menu-item:hover>.sub-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* Ikon animasi dropdown */
+.toggle-icon {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon:hover {
+    transform: scale(1.2);
+}
+
+.menu-item:hover>a .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: left;
+        width: 100%;
+    }
+
+    .submenu {
+        position: static;
+        /* Ubah ke static untuk mobile */
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        padding-left: 0;
+        /* Hapus padding kiri */
+        display: none;
+        /* Sembunyikan submenu secara default */
+        text-align: left;
+        /* Teks di tengah */
+    }
+
+    .submenu.active {
+        display: block;
+        /* Tampilkan submenu saat aktif */
+    }
+
+    .sub-submenu {
+        position: static;
+        /* Ubah ke static untuk mobile */
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        padding-left: 0;
+        /* Hapus padding kiri */
+        display: none;
+        /* Sembunyikan sub-submenu secara default */
+        text-align: left;
+        /* Teks di tengah */
+    }
+
+    .sub-submenu.active {
+        display: block;
+        /* Tampilkan sub-submenu saat aktif */
+    }
+
+    .menu-item a {
+        padding: 8px 15px;
+        justify-content: left;
+        /* Pusatkan teks di mobile */
+    }
+
+    .submenu .menu-item {
+        padding: 0;
+        text-align: left;
+        /* Teks di tengah */
+
+    }
+
+    .submenu .menu-item a {
+        padding: 8px 15px;
+    }
+
+    .toggle-icon {
+        cursor: pointer;
+        /* Tambahkan cursor pointer untuk ikon toggle */
+    }
+}

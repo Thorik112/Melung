@@ -1,0 +1,186 @@
+    /* Carousel Container */
+    #bootstrapCarousel {
+        padding: 20px 0;
+        /* background: #f8f9fa; */
+    }
+
+    /* Custom Card Styling */
+    .custom-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .custom-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Card Body */
+    .card-body {
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Image Styling */
+    .custom-card-image img {
+        width: 200px;
+        /* Membuat gambar lebih besar */
+        height: 250px;
+        /* Membuat gambar lebih besar */
+        border-radius: 10%;
+        object-fit: cover;
+        border: 4px solid #e9ecef;
+        margin-bottom: 15px;
+    }
+
+    /* Card Content */
+    .custom-card-content i {
+        color: #ff5722;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .custom-card-content h3 {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .custom-card-content span {
+        font-size: 14px;
+        color: #777;
+    }
+
+    /* Custom Navigation Buttons */
+    .slider-arrow-btns {
+        display: flex;
+        justify-content: center;
+    }
+
+    .feedback-prev,
+    .feedback-next {
+        background: #ffffff;
+        border: 2px solid #ddd;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .feedback-prev:hover,
+    .feedback-next:hover {
+        background-color: #333;
+        border-color: #333;
+        color: #fff;
+    }
+
+    .feedback-prev i,
+    .feedback-next i {
+        font-size: 18px;
+        color: #333;
+    }
+
+    .feedback-prev:hover i,
+    .feedback-next:hover i {
+        color: #fff;
+    }
+
+    .content-short {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        /* Add this line */
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+        /* Add this line for standard property */
+        overflow: hidden;
+        /* Kira-kira 2 baris teks */
+    }
+
+    .content-full {
+        display: none;
+    }
+
+    .content-expanded .content-full {
+        display: block;
+    }
+
+    .content-expanded .content-short {
+        display: none;
+    }
+
+    .modern-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        background-color: #fff;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .modern-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .blog-meta {
+        font-size: 0.9rem;
+        color: #888;
+    }
+
+    .blog-content h4 {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .btn-primary.btn-sm {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+
+    .card-title a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    .card-title a:hover {
+        color: #007bff;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .blog-meta a {
+        font-size: 0.8rem;
+        color: #6c757d;
+        text-decoration: none;
+    }
+
+    .blog-meta a:hover {
+        color: #007bff;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+    }
+
+    .btn-primary i {
+        margin-left: 5px;
+    }
